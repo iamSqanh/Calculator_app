@@ -5,7 +5,7 @@ import ItemNumber from "./ItemNumber";
 function Calculator() {
   const[result, setResult] = useState("")
 
-  console.log(result)
+  console.log(typeof result)
 
   const handleClick = (value) => {
     setResult(result.concat(value))
@@ -31,8 +31,8 @@ function Calculator() {
   const handleCalculate = () => {
     try {
       //eval tính toán biểu thức toán học sau khi tính toán xong kq chuyển đổi thành string
-      // eslint-disable-next-line no-eval
-      setResult(eval(result).toFixed(3).toString())
+      // eslint-disable-next-line no-eval 
+      setResult(eval(result).toString())
     } catch (error) {
       console.log(error)
     }
